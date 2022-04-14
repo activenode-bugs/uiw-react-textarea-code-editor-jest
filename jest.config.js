@@ -7,7 +7,7 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
     '^@/components/(.*)$': '<rootDir>/components/$1',
@@ -15,6 +15,8 @@ const customJestConfig = {
     '^@/pages/(.*)$': '<rootDir>/pages/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
+  // transformIgnorePatterns: ['<rootDir>/node_modules/rehype'],
+  moduleDirectories: ['node_modules', '<rootDir>/']
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
