@@ -1,25 +1,9 @@
-# Next.js + Jest
+# Next.js + Jest + React Editor Bug
 
-This example shows how to configure Jest to work with Next.js.
+Reproduction Steps:
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
-
-## How to Use
-
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
-```bash
-npx create-next-app --example with-jest with-jest-app
-# or
-yarn create next-app --example with-jest with-jest-app
-# or
-pnpm create next-app -- --example with-jest with-jest-app
-```
-
-## Run Jest Tests
-
-```bash
-npm test
-```
+1. `npm i`
+1. `yarn jest` (or `npx jest`)
+1. See the problem
+1. Remove comments in `jest.config`
+1. Problem is "fixed"
